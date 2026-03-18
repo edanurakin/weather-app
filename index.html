@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Tahmini</title>
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for elegant weather icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-sunny"> <!-- Default to sunny -->
+
+    <div class="app-container">
+        <!-- Search Section -->
+        <header class="search-section">
+            <div class="search-box">
+                <i class="ph ph-magnifying-glass search-icon"></i>
+                <input type="text" id="city-input" placeholder="Şehir arayın (ör. İstanbul, Ankara)" autocomplete="off">
+                <button id="search-btn">Ara</button>
+            </div>
+            <div class="error-msg" id="error-msg"></div>
+        </header>
+
+        <!-- Current Weather -->
+        <main class="current-weather" id="current-weather">
+            <div class="weather-icon-container" id="current-icon">
+                <i class="ph ph-sun"></i>
+            </div>
+            <div class="weather-info">
+                <h1 id="city-name">Şehir Seçilmedi</h1>
+                <div class="temp"><span id="current-temp">--</span>°C</div>
+                <div class="desc" id="current-desc">Lütfen bir şehir arayın</div>
+            </div>
+        </main>
+
+        <!-- Dynamic Suggestion Section -->
+        <section class="suggestion-section">
+            <div class="frog-container">
+                <img id="frog-image" src="" alt="Hava Durumu Kurbağası">
+            </div>
+            <div class="suggestion-text" id="suggestion-text">
+                Hava durumuna göre öneri bekleniyor...
+            </div>
+        </section>
+
+        <!-- 5-Day Forecast -->
+        <section class="forecast-section" id="forecast-section">
+            <h2>5 Günlük Tahmin</h2>
+            <div class="forecast-container" id="forecast-container">
+                <!-- Forecast items will be injected here via JS -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
